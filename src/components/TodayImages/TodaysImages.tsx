@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     alignItems: "flex-end",
+    borderRadius:20,
   },
 });
 

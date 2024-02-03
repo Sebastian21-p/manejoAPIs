@@ -1,4 +1,4 @@
-export type PostImage = {
+export type PostImagee = {
     date?: string;
     explanation?:string;
     hdurl?:string;
