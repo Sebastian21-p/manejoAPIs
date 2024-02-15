@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
-import { View,Text, Button, StyleSheet } from 'react-native';
+import { View,Text, Button, StyleSheet, Image } from 'react-native';
 import { PostImagee } from '../../types';
 
-const PostImage: FC<PostImagee>= ({title,date}) =>{
+const PostImage: FC<PostImagee>= ({title,date, url}) =>{
     return(
         <View style={styles.container}>
+            <Image source={{ uri: url }} style={styles.image} />
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.date}>{date}</Text>
             <View style={styles.buttonContainer}>
@@ -32,7 +33,14 @@ const styles = StyleSheet.create({
     },
     buttonContainer:{
         alignItems:'flex-end'
-    }
+    },
+    image: {
+        width: "100%",
+        height: 200,
+        borderWidth: 1,
+        borderColor: "#fff",
+        borderRadius: 32,
+      }
 });
 
 export default PostImage;

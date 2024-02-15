@@ -7,3 +7,8 @@ export type PostImagee = {
     title?:string;
     url?:string;
 }
+
+export type RootStackParams = {
+Home: undefined;
+Detail: undefined;
+};

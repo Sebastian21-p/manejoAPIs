@@ -1,10 +1,10 @@
 import { Platform, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
-import Home from './src/views/Home';
+import Routes from './src/routes';
 
-export default function App() {
+ function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
-      <Home />
+      <Routes />
     </SafeAreaView>
   );
 }
@@ -16,3 +16,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(7,26,93,255)'
   },
 });
+
+export default App;

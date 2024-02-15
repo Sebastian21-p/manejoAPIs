@@ -33,8 +33,12 @@ const Home = () => {
         const lastFiveDaysImageResponse = await fetchApi(
           `&start_date=${fiveDaysAgoDate}&end_date=${todaysDate}`
           );
-      
-        setLastFiveDaysImages(lastFiveDaysImageResponse);
+
+          const sortedResponse = lastFiveDaysImageResponse.sort(
+            (a: { date: string }, b: { date: string }) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          );
+
+        setLastFiveDaysImages(sortedResponse);
       }catch(error){
         console.error(error);
       }

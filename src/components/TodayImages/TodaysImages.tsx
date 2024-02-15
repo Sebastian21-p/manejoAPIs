@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { Text, View, StyleSheet, Image, Button } from "react-native";
 
-import { PostImage } from "../../types";
+import { PostImagee } from "../../types";
 
-const TodaysImage: FC<PostImage> = ({ date, title, url }) => {
+const TodaysImage: FC<PostImagee> = ({ date, title, url }) => {
   return (
     <View style={styles.container}>
       <Image source={{ uri: url }} style={styles.image} />
