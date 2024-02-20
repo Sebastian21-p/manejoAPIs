@@ -10,5 +10,5 @@ export type PostImagee = {
 
 export type RootStackParams = {
 Home: undefined;
-Detail: undefined;
+Detail: PostImagee;
 };
